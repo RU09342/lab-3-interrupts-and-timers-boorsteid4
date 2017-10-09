@@ -10,12 +10,12 @@ Interrupts are not stops in a program, but routines with a certain priority. The
 
 To set an interrupt routine, I used the following statement:
 
-'''c
+```c
 #pragma vector=PORT1_VECTOR
 __interrupt void Port_1(void)
 {
 }
-'''
+```
 
 and changed the PORTx_VECTOR according to which port the button pin was on.
 

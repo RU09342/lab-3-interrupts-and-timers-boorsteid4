@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;lab3_buttondelay_MSP430FR6989/main.c&apos; to &apos;buttondelay.c&apos;" description="Rename resource &apos;main.c&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="main.c" name="buttondelay.c" stamp="1507514163667" updateReferences="true"/>
+</session>
