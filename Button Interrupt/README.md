@@ -48,6 +48,16 @@ Using EnergyTrace on the FR series boards, I found that the button blink code th
 
 ## EXTRA WORK: 8-bit Shift Register
 
-I found, through Texas Instruments, an 8-bit shift register program for the MSP430x20x2 series processors. By changing the include, I was able to get it working on the G2553. In a roundabout way, the code creates a pin-pong effect using a software loop inside of the main. 
+I found, through Texas Instruments, an 8-bit shift register program for the MSP430x20x2 series processors. By changing the include, I was able to get it working on the G2553. In a roundabout way, the code creates a ping-pong effect using a software loop inside of the main function. Several other functions are included in the main to set up registers, shift bits, latch values, count, and delay.
 
-P1DIR is set up to use bits, which are defined in the program as `DATA`, `CLOCK`, `LATCH`, and `ENABLE`. `DATA` is connected to LED1. `CLOCK` is pulsed in a void function.
+P1DIR is set up to use bits, which are defined in the program as `DATA`, `CLOCK`, `LATCH`, and `ENABLE`. 
+* `DATA` is connected to LED1. 
+* `CLOCK` is pulsed in a void function. 
+* `LATCH` is used to retain the value from the previous shift and toggled to write to the next. 
+* `ENABLE` is used as a shortcut to turn on or turn off the LED array.
+
+If I had a 74HC595 Shift Register, I could fully implement this using external components. I would use the circuit in the following figure.
+
+![Schematic](http://processors.wiki.ti.com/images/4/46/74HC595.png)
+
+The inputs to this circuit are P1.0, 1.4, 1.5, and 1.6. The current being driven through each LED is controlled by a 270 Ohm resistor. The IC is being powered by VCC and is referenced at GND. Optionally, I could add a 0.1 microF cap between the latch pin and GND to stabilize the output.
