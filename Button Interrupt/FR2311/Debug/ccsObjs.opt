@@ -1,0 +1,1 @@
+"./buttoninterrupt.obj" "./energytrace/buttoninterrupt.obj" "../lnk_msp430fr2311.cmd" -llibc.a 

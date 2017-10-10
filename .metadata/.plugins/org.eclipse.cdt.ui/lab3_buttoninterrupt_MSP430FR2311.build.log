@@ -1,0 +1,35 @@
+
+**** Build of configuration Debug for project lab3_buttoninterrupt_MSP430FR2311 ****
+
+"C:\\ti\\ccsv7\\utils\\bin\\gmake" -k -j 4 all -O 
+'Building file: ../energytrace/buttoninterrupt.c'
+'Invoking: MSP430 Compiler'
+"C:/ti/ccsv7/tools/compiler/ti-cgt-msp430_16.9.4.LTS/bin/cl430" -vmspx --use_hw_mpy=none --include_path="C:/ti/ccsv7/ccs_base/msp430/include" --include_path="C:/Users/nomad/OneDrive/Documents/School/Rowan/Embedded/Lab 3/Button Interrupt/FR2311" --include_path="C:/ti/ccsv7/tools/compiler/ti-cgt-msp430_16.9.4.LTS/include" --advice:power=all --advice:hw_config=all --define=__MSP430FR2311__ -g --printf_support=minimal --diag_warning=225 --diag_wrap=off --display_error_number --silicon_errata=CPU21 --silicon_errata=CPU22 --silicon_errata=CPU40 --preproc_with_compile --preproc_dependency="energytrace/buttoninterrupt.d" --obj_directory="energytrace"  "../energytrace/buttoninterrupt.c"
+"../energytrace/buttoninterrupt.c", line 76: remark #1527-D: (ULP 2.1) Detected SW delay loop using __delay_cycles. Recommend using a timer module instead
+'Finished building: ../energytrace/buttoninterrupt.c'
+' '
+'Building file: ../buttoninterrupt.c'
+'Invoking: MSP430 Compiler'
+"C:/ti/ccsv7/tools/compiler/ti-cgt-msp430_16.9.4.LTS/bin/cl430" -vmspx --use_hw_mpy=none --include_path="C:/ti/ccsv7/ccs_base/msp430/include" --include_path="C:/Users/nomad/OneDrive/Documents/School/Rowan/Embedded/Lab 3/Button Interrupt/FR2311" --include_path="C:/ti/ccsv7/tools/compiler/ti-cgt-msp430_16.9.4.LTS/include" --advice:power=all --advice:hw_config=all --define=__MSP430FR2311__ -g --printf_support=minimal --diag_warning=225 --diag_wrap=off --display_error_number --silicon_errata=CPU21 --silicon_errata=CPU22 --silicon_errata=CPU40 --preproc_with_compile --preproc_dependency="buttoninterrupt.d"  "../buttoninterrupt.c"
+"../buttoninterrupt.c", line 76: remark #1527-D: (ULP 2.1) Detected SW delay loop using __delay_cycles. Recommend using a timer module instead
+'Finished building: ../buttoninterrupt.c'
+' '
+'Building target: lab3_buttoninterrupt_MSP430FR2311.out'
+'Invoking: MSP430 Linker'
+"C:/ti/ccsv7/tools/compiler/ti-cgt-msp430_16.9.4.LTS/bin/cl430" -vmspx --use_hw_mpy=none --advice:power=all --advice:hw_config=all --define=__MSP430FR2311__ -g --printf_support=minimal --diag_warning=225 --diag_wrap=off --display_error_number --silicon_errata=CPU21 --silicon_errata=CPU22 --silicon_errata=CPU40 -z -m"lab3_buttoninterrupt_MSP430FR2311.map" --heap_size=160 --stack_size=160 --cinit_hold_wdt=on -i"C:/ti/ccsv7/ccs_base/msp430/include" -i"C:/ti/ccsv7/tools/compiler/ti-cgt-msp430_16.9.4.LTS/lib" -i"C:/ti/ccsv7/tools/compiler/ti-cgt-msp430_16.9.4.LTS/include" --reread_libs --diag_wrap=off --display_error_number --warn_sections --xml_link_info="lab3_buttoninterrupt_MSP430FR2311_linkInfo.xml" --use_hw_mpy=none --rom_model -o "lab3_buttoninterrupt_MSP430FR2311.out" "./buttoninterrupt.obj" "./energytrace/buttoninterrupt.obj" "../lnk_msp430fr2311.cmd"  -llibc.a 
+<Linking>
+error #10056: symbol "__TI_int47" redefined: first defined in "./buttoninterrupt.obj"; redefined in "./energytrace/buttoninterrupt.obj"
+error #10056: symbol "Port_1" redefined: first defined in "./buttoninterrupt.obj"; redefined in "./energytrace/buttoninterrupt.obj"
+error #10056: symbol "main" redefined: first defined in "./buttoninterrupt.obj"; redefined in "./energytrace/buttoninterrupt.obj"
+error #10056: symbol "blink" redefined: first defined in "./buttoninterrupt.obj"; redefined in "./energytrace/buttoninterrupt.obj"
+remark #10371-D: (ULP 1.1) Detected no uses of low power mode state changing instructions
+error #10010: errors encountered during linking; "lab3_buttoninterrupt_MSP430FR2311.out" not built
+remark #10372-D: (ULP 4.1) Detected uninitialized Port A in this project. Recommend initializing all unused ports to eliminate wasted current consumption on unused pins.
+
+>> Compilation failure
+makefile:144: recipe for target 'lab3_buttoninterrupt_MSP430FR2311.out' failed
+gmake[1]: *** [lab3_buttoninterrupt_MSP430FR2311.out] Error 1
+makefile:140: recipe for target 'all' failed
+gmake: *** [all] Error 2
+
+**** Build Finished ****

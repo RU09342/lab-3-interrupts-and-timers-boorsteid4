@@ -1,0 +1,45 @@
+
+**** Build of configuration Debug for project lab3_buttoninterrupt_MSP430F5529 ****
+
+"C:\\ti\\ccsv7\\utils\\bin\\gmake" -k -j 4 all -O 
+'Building file: ../F5529/buttoninterrupt.c'
+'Invoking: MSP430 Compiler'
+"C:/ti/ccsv7/tools/compiler/ti-cgt-msp430_16.9.4.LTS/bin/cl430" -vmspx --data_model=restricted --use_hw_mpy=F5 --include_path="C:/ti/ccsv7/ccs_base/msp430/include" --include_path="C:/Users/nomad/OneDrive/Documents/School/Rowan/Embedded/Lab 3/Button Interrupt/F5529" --include_path="C:/ti/ccsv7/tools/compiler/ti-cgt-msp430_16.9.4.LTS/include" --advice:power=all --define=__MSP430F5529__ -g --printf_support=minimal --diag_warning=225 --diag_wrap=off --display_error_number --silicon_errata=CPU21 --silicon_errata=CPU22 --silicon_errata=CPU23 --silicon_errata=CPU40 --preproc_with_compile --preproc_dependency="F5529/buttoninterrupt.d" --obj_directory="F5529"  "../F5529/buttoninterrupt.c"
+"../F5529/buttoninterrupt.c", line 82: remark #1540-D: (ULP 11.2) Assignment of higher bits (constants) to "PBOUT_H" within a loop. Recommend using lower 4 bits to allow use of constant generators
+"../F5529/buttoninterrupt.c", line 77: remark #1527-D: (ULP 2.1) Detected SW delay loop using __delay_cycles. Recommend using a timer module instead
+"../F5529/buttoninterrupt.c", line 83: remark #1527-D: (ULP 2.1) Detected SW delay loop using __delay_cycles. Recommend using a timer module instead
+'Finished building: ../F5529/buttoninterrupt.c'
+' '
+'Building file: ../buttoninterrupt.c'
+'Invoking: MSP430 Compiler'
+"C:/ti/ccsv7/tools/compiler/ti-cgt-msp430_16.9.4.LTS/bin/cl430" -vmspx --data_model=restricted --use_hw_mpy=F5 --include_path="C:/ti/ccsv7/ccs_base/msp430/include" --include_path="C:/Users/nomad/OneDrive/Documents/School/Rowan/Embedded/Lab 3/Button Interrupt/F5529" --include_path="C:/ti/ccsv7/tools/compiler/ti-cgt-msp430_16.9.4.LTS/include" --advice:power=all --define=__MSP430F5529__ -g --printf_support=minimal --diag_warning=225 --diag_wrap=off --display_error_number --silicon_errata=CPU21 --silicon_errata=CPU22 --silicon_errata=CPU23 --silicon_errata=CPU40 --preproc_with_compile --preproc_dependency="buttoninterrupt.d"  "../buttoninterrupt.c"
+"../buttoninterrupt.c", line 82: remark #1540-D: (ULP 11.2) Assignment of higher bits (constants) to "PBOUT_H" within a loop. Recommend using lower 4 bits to allow use of constant generators
+"../buttoninterrupt.c", line 77: remark #1527-D: (ULP 2.1) Detected SW delay loop using __delay_cycles. Recommend using a timer module instead
+"../buttoninterrupt.c", line 83: remark #1527-D: (ULP 2.1) Detected SW delay loop using __delay_cycles. Recommend using a timer module instead
+'Finished building: ../buttoninterrupt.c'
+' '
+'Building target: lab3_buttoninterrupt_MSP430F5529.out'
+'Invoking: MSP430 Linker'
+"C:/ti/ccsv7/tools/compiler/ti-cgt-msp430_16.9.4.LTS/bin/cl430" -vmspx --data_model=restricted --use_hw_mpy=F5 --advice:power=all --define=__MSP430F5529__ -g --printf_support=minimal --diag_warning=225 --diag_wrap=off --display_error_number --silicon_errata=CPU21 --silicon_errata=CPU22 --silicon_errata=CPU23 --silicon_errata=CPU40 -z -m"lab3_buttoninterrupt_MSP430F5529.map" --heap_size=160 --stack_size=160 --cinit_hold_wdt=on -i"C:/ti/ccsv7/ccs_base/msp430/include" -i"C:/ti/ccsv7/ccs_base/msp430/lib/5xx_6xx_FRxx" -i"C:/ti/ccsv7/tools/compiler/ti-cgt-msp430_16.9.4.LTS/lib" -i"C:/ti/ccsv7/tools/compiler/ti-cgt-msp430_16.9.4.LTS/include" --reread_libs --diag_wrap=off --display_error_number --warn_sections --xml_link_info="lab3_buttoninterrupt_MSP430F5529_linkInfo.xml" --use_hw_mpy=F5 --rom_model -o "lab3_buttoninterrupt_MSP430F5529.out" "./buttoninterrupt.obj" "./F5529/buttoninterrupt.obj" "../lnk_msp430f5529.cmd"  -llibmath.a -llibc.a 
+<Linking>
+error #10056: symbol "__TI_int47" redefined: first defined in "./buttoninterrupt.obj"; redefined in "./F5529/buttoninterrupt.obj"
+error #10056: symbol "__TI_int42" redefined: first defined in "./buttoninterrupt.obj"; redefined in "./F5529/buttoninterrupt.obj"
+error #10056: symbol "Port_1" redefined: first defined in "./buttoninterrupt.obj"; redefined in "./F5529/buttoninterrupt.obj"
+error #10056: symbol "Port_2" redefined: first defined in "./buttoninterrupt.obj"; redefined in "./F5529/buttoninterrupt.obj"
+error #10056: symbol "main" redefined: first defined in "./buttoninterrupt.obj"; redefined in "./F5529/buttoninterrupt.obj"
+error #10056: symbol "blink1" redefined: first defined in "./buttoninterrupt.obj"; redefined in "./F5529/buttoninterrupt.obj"
+error #10056: symbol "blink2" redefined: first defined in "./buttoninterrupt.obj"; redefined in "./F5529/buttoninterrupt.obj"
+remark #10371-D: (ULP 1.1) Detected no uses of low power mode state changing instructions
+error #10010: errors encountered during linking; "lab3_buttoninterrupt_MSP430F5529.out" not built
+remark #10372-D: (ULP 4.1) Detected uninitialized Port A in this project. Recommend initializing all unused ports to eliminate wasted current consumption on unused pins.
+remark #10372-D: (ULP 4.1) Detected uninitialized Port B in this project. Recommend initializing all unused ports to eliminate wasted current consumption on unused pins.
+remark #10372-D: (ULP 4.1) Detected uninitialized Port C in this project. Recommend initializing all unused ports to eliminate wasted current consumption on unused pins.
+remark #10372-D: (ULP 4.1) Detected uninitialized Port D in this project. Recommend initializing all unused ports to eliminate wasted current consumption on unused pins.
+
+>> Compilation failure
+makefile:145: recipe for target 'lab3_buttoninterrupt_MSP430F5529.out' failed
+gmake[1]: *** [lab3_buttoninterrupt_MSP430F5529.out] Error 1
+makefile:141: recipe for target 'all' failed
+gmake: *** [all] Error 2
+
+**** Build Finished ****

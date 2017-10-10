@@ -1,0 +1,38 @@
+
+**** Build of configuration Debug for project lab3_buttoninterrupt_MSP430G2553 ****
+
+"C:\\ti\\ccsv7\\utils\\bin\\gmake" -k -j 4 all -O 
+'Building file: ../buttoninterrupt.c'
+'Invoking: MSP430 Compiler'
+"C:/ti/ccsv7/tools/compiler/ti-cgt-msp430_16.9.4.LTS/bin/cl430" -vmsp --use_hw_mpy=none --include_path="C:/ti/ccsv7/ccs_base/msp430/include" --include_path="C:/Users/nomad/OneDrive/Documents/School/Rowan/Embedded/Lab 3/Button Interrupt/G2553" --include_path="C:/ti/ccsv7/tools/compiler/ti-cgt-msp430_16.9.4.LTS/include" --advice:power=all --define=__MSP430G2553__ -g --printf_support=minimal --diag_warning=225 --diag_wrap=off --display_error_number --preproc_with_compile --preproc_dependency="buttoninterrupt.d"  "../buttoninterrupt.c"
+"../buttoninterrupt.c", line 64: remark #1540-D: (ULP 11.2) Assignment of higher bits (constants) to "P1OUT" within a loop. Recommend using lower 4 bits to allow use of constant generators
+"../buttoninterrupt.c", line 66: remark #1527-D: (ULP 2.1) Detected SW delay loop using __delay_cycles. Recommend using a timer module instead
+'Finished building: ../buttoninterrupt.c'
+' '
+'Building file: ../G2553/buttoninterrupt.c'
+'Invoking: MSP430 Compiler'
+"C:/ti/ccsv7/tools/compiler/ti-cgt-msp430_16.9.4.LTS/bin/cl430" -vmsp --use_hw_mpy=none --include_path="C:/ti/ccsv7/ccs_base/msp430/include" --include_path="C:/Users/nomad/OneDrive/Documents/School/Rowan/Embedded/Lab 3/Button Interrupt/G2553" --include_path="C:/ti/ccsv7/tools/compiler/ti-cgt-msp430_16.9.4.LTS/include" --advice:power=all --define=__MSP430G2553__ -g --printf_support=minimal --diag_warning=225 --diag_wrap=off --display_error_number --preproc_with_compile --preproc_dependency="G2553/buttoninterrupt.d" --obj_directory="G2553"  "../G2553/buttoninterrupt.c"
+"../G2553/buttoninterrupt.c", line 64: remark #1540-D: (ULP 11.2) Assignment of higher bits (constants) to "P1OUT" within a loop. Recommend using lower 4 bits to allow use of constant generators
+"../G2553/buttoninterrupt.c", line 66: remark #1527-D: (ULP 2.1) Detected SW delay loop using __delay_cycles. Recommend using a timer module instead
+'Finished building: ../G2553/buttoninterrupt.c'
+' '
+'Building target: lab3_buttoninterrupt_MSP430G2553.out'
+'Invoking: MSP430 Linker'
+"C:/ti/ccsv7/tools/compiler/ti-cgt-msp430_16.9.4.LTS/bin/cl430" -vmsp --use_hw_mpy=none --advice:power=all --define=__MSP430G2553__ -g --printf_support=minimal --diag_warning=225 --diag_wrap=off --display_error_number -z -m"lab3_buttoninterrupt_MSP430G2553.map" --heap_size=80 --stack_size=80 -i"C:/ti/ccsv7/ccs_base/msp430/include" -i"C:/ti/ccsv7/tools/compiler/ti-cgt-msp430_16.9.4.LTS/lib" -i"C:/ti/ccsv7/tools/compiler/ti-cgt-msp430_16.9.4.LTS/include" --reread_libs --diag_wrap=off --display_error_number --warn_sections --xml_link_info="lab3_buttoninterrupt_MSP430G2553_linkInfo.xml" --use_hw_mpy=none --rom_model -o "lab3_buttoninterrupt_MSP430G2553.out" "./buttoninterrupt.obj" "./G2553/buttoninterrupt.obj" "../lnk_msp430g2553.cmd"  -llibc.a 
+<Linking>
+error #10056: symbol "__TI_int02" redefined: first defined in "./buttoninterrupt.obj"; redefined in "./G2553/buttoninterrupt.obj"
+error #10056: symbol "Port_1" redefined: first defined in "./buttoninterrupt.obj"; redefined in "./G2553/buttoninterrupt.obj"
+error #10056: symbol "main" redefined: first defined in "./buttoninterrupt.obj"; redefined in "./G2553/buttoninterrupt.obj"
+remark #10371-D: (ULP 1.1) Detected no uses of low power mode state changing instructions
+error #10056: symbol "blink" redefined: first defined in "./buttoninterrupt.obj"; redefined in "./G2553/buttoninterrupt.obj"
+remark #10372-D: (ULP 4.1) Detected uninitialized Port 2 in this project. Recommend initializing all unused ports to eliminate wasted current consumption on unused pins.
+remark #10372-D: (ULP 4.1) Detected uninitialized Port 3 in this project. Recommend initializing all unused ports to eliminate wasted current consumption on unused pins.
+
+>> Compilation failure
+makefile:144: recipe for target 'lab3_buttoninterrupt_MSP430G2553.out' failed
+error #10010: errors encountered during linking; "lab3_buttoninterrupt_MSP430G2553.out" not built
+gmake[1]: *** [lab3_buttoninterrupt_MSP430G2553.out] Error 1
+makefile:140: recipe for target 'all' failed
+gmake: *** [all] Error 2
+
+**** Build Finished ****

@@ -18,12 +18,7 @@
 // Damon Boorstein
 // Rowan University
 // Date Created: September 25, 2017
-// Date Updated: October 1, 2017
-//
-// Original Program by
-// Aldo Briano
-// Texas Instruments, Inc
-// June 2010
+// Date Updated: October 8, 2017
 //
 // Built with Code Composer Studio v7.2.0
 //***************************************************************************************
@@ -61,7 +56,7 @@ void main(void)
 
     TA0CCTL0 = CCIE;
     TA0CCR0 = 25000;
-    TA0CTL = TASSEL_2 + MC_1 + ID_3 + IDEX_7 + TACLR; // Set the timer A to SMCLCK/2, Up
+    TA0CTL = TASSEL_2 + MC_1 + ID_3 + TACLR; // Set the timer A to SMCLCK/2, Up
 
     __enable_interrupt(); // Clear timer, enable interrupts.
 

@@ -32,3 +32,11 @@ Masking this with the button bit will tell the processor to look for interrupts 
 ### Interrupt Flag
 
 This is set whenever an interrupt is triggered to alert the processor. It can be cleared in the program setup and in the interrupt routine.
+
+## EnergyTrace
+
+Using EnergyTrace, I found that the button blink code that used interrupts had slightly better energy performance than the button blink code.
+
+![FR2311](/FR2311/energytrace/energytrace_compare.png)
+![FR5994](/FR5994/energytrace/energytrace_compare.png)
+![FR6989](/FR6989/energytrace/energytrace_compare.png)
