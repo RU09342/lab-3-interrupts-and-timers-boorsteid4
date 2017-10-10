@@ -37,6 +37,6 @@ This is set whenever an interrupt is triggered to alert the processor. It can be
 
 Using EnergyTrace, I found that the button blink code that used interrupts had slightly better energy performance than the button blink code.
 
-![FR2311](../FR2311/energytrace/energytrace_compare.png)
-![FR5994](../FR5994/energytrace/energytrace_compare.png)
-![FR6989](../FR6989/energytrace/energytrace_compare.png)
+![FR2311](https://raw.githubusercontent.com/RU09342/lab-3-interrupts-and-timers-boorsteid4/master/Button%20Interrupt/FR2311/energytrace/energytrace_compare.png)
+![FR5994](https://raw.githubusercontent.com/RU09342/lab-3-interrupts-and-timers-boorsteid4/master/Button%20Interrupt/FR5994/energytrace/energytrace_compare.png)
+![FR6989](https://raw.githubusercontent.com/RU09342/lab-3-interrupts-and-timers-boorsteid4/master/Button%20Interrupt/FR6989/energytrace/energytrace_compare.png)
