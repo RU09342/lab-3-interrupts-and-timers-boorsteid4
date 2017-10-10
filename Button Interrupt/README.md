@@ -35,7 +35,7 @@ This is set whenever an interrupt is triggered to alert the processor. It can be
 
 ## EnergyTrace
 
-Using EnergyTrace on the FR series boards, I found that the button blink code that used interrupts had slightly better energy performance than the button blink code.
+Using EnergyTrace on the FR series boards, I found that the button blink code that used interrupts had slightly better energy performance than the button blink code. A green delta means that the energy profile on the left is better than the one on the right.
 
 ### FR2311
 ![FR2311](https://raw.githubusercontent.com/RU09342/lab-3-interrupts-and-timers-boorsteid4/master/Button%20Interrupt/FR2311/energytrace/energytrace_compare.png)
