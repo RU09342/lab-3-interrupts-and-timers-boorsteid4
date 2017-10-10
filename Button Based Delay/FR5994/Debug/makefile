@@ -10,7 +10,7 @@ GEN_OPTS__FLAG :=
 GEN_CMDS__FLAG := 
 
 ORDERED_OBJS += \
-"./main.obj" \
+"./buttondelay.obj" \
 "../lnk_msp430fr5994.cmd" \
 $(GEN_CMDS__FLAG) \
 -llibmpu_init.a \
@@ -122,41 +122,41 @@ endif
 
 # Add inputs and outputs from these tool invocations to the build variables 
 EXE_OUTPUTS += \
-lab3_buttondelay_MSP430FR5994.out \
+FR5994.out \
 
 EXE_OUTPUTS__QUOTED += \
-"lab3_buttondelay_MSP430FR5994.out" \
+"FR5994.out" \
 
 BIN_OUTPUTS += \
-lab3_buttondelay_MSP430FR5994.hex \
+FR5994.hex \
 
 BIN_OUTPUTS__QUOTED += \
-"lab3_buttondelay_MSP430FR5994.hex" \
+"FR5994.hex" \
 
 
 # All Target
 all: $(OBJS) $(CMD_SRCS) $(GEN_CMDS)
-	@$(MAKE) --no-print-directory -Onone "lab3_buttondelay_MSP430FR5994.out"
+	@$(MAKE) --no-print-directory -Onone "FR5994.out"
 
 # Tool invocations
-lab3_buttondelay_MSP430FR5994.out: $(OBJS) $(CMD_SRCS) $(GEN_CMDS)
+FR5994.out: $(OBJS) $(CMD_SRCS) $(GEN_CMDS)
 	@echo 'Building target: $@'
 	@echo 'Invoking: MSP430 Linker'
-	"C:/ti/ccsv7/tools/compiler/ti-cgt-msp430_16.9.4.LTS/bin/cl430" -vmspx --data_model=restricted --use_hw_mpy=F5 --advice:power=all --advice:hw_config=all --define=__MSP430FR5994__ --define=_MPU_ENABLE -g --printf_support=minimal --diag_warning=225 --diag_wrap=off --display_error_number --silicon_errata=CPU21 --silicon_errata=CPU22 --silicon_errata=CPU40 -z -m"lab3_buttondelay_MSP430FR5994.map" --heap_size=160 --stack_size=160 --cinit_hold_wdt=on -i"C:/ti/ccsv7/ccs_base/msp430/include" -i"C:/ti/ccsv7/ccs_base/msp430/lib/5xx_6xx_FRxx" -i"C:/ti/ccsv7/ccs_base/msp430/lib/FR59xx" -i"C:/ti/ccsv7/tools/compiler/ti-cgt-msp430_16.9.4.LTS/lib" -i"C:/ti/ccsv7/tools/compiler/ti-cgt-msp430_16.9.4.LTS/include" --priority --reread_libs --define=_MPU_ENABLE --diag_wrap=off --display_error_number --warn_sections --xml_link_info="lab3_buttondelay_MSP430FR5994_linkInfo.xml" --use_hw_mpy=F5 --rom_model -o "lab3_buttondelay_MSP430FR5994.out" $(ORDERED_OBJS)
+	"C:/ti/ccsv7/tools/compiler/ti-cgt-msp430_16.9.4.LTS/bin/cl430" -vmspx --data_model=restricted --use_hw_mpy=F5 --advice:power=all --advice:hw_config=all --define=__MSP430FR5994__ --define=_MPU_ENABLE -g --printf_support=minimal --diag_warning=225 --diag_wrap=off --display_error_number --silicon_errata=CPU21 --silicon_errata=CPU22 --silicon_errata=CPU40 -z -m"FR5994.map" --heap_size=160 --stack_size=160 --cinit_hold_wdt=on -i"C:/ti/ccsv7/ccs_base/msp430/include" -i"C:/ti/ccsv7/ccs_base/msp430/lib/5xx_6xx_FRxx" -i"C:/ti/ccsv7/ccs_base/msp430/lib/FR59xx" -i"C:/ti/ccsv7/tools/compiler/ti-cgt-msp430_16.9.4.LTS/lib" -i"C:/ti/ccsv7/tools/compiler/ti-cgt-msp430_16.9.4.LTS/include" --priority --reread_libs --define=_MPU_ENABLE --diag_wrap=off --display_error_number --warn_sections --xml_link_info="FR5994_linkInfo.xml" --use_hw_mpy=F5 --rom_model -o "FR5994.out" $(ORDERED_OBJS)
 	@echo 'Finished building target: $@'
 	@echo ' '
 
-lab3_buttondelay_MSP430FR5994.hex: $(EXE_OUTPUTS)
+FR5994.hex: $(EXE_OUTPUTS)
 	@echo 'Invoking: MSP430 Hex Utility'
-	"C:/ti/ccsv7/tools/compiler/ti-cgt-msp430_16.9.4.LTS/bin/hex430" --memwidth=8 --romwidth=8 -o "lab3_buttondelay_MSP430FR5994.hex" $(EXE_OUTPUTS__QUOTED)
+	"C:/ti/ccsv7/tools/compiler/ti-cgt-msp430_16.9.4.LTS/bin/hex430" --memwidth=8 --romwidth=8 -o "FR5994.hex" $(EXE_OUTPUTS__QUOTED)
 	@echo 'Finished building: $@'
 	@echo ' '
 
 # Other Targets
 clean:
 	-$(RM) $(BIN_OUTPUTS__QUOTED)$(EXE_OUTPUTS__QUOTED)
-	-$(RM) "main.obj" 
-	-$(RM) "main.d" 
+	-$(RM) "buttondelay.obj" 
+	-$(RM) "buttondelay.d" 
 	-@echo 'Finished clean'
 	-@echo ' '
 
