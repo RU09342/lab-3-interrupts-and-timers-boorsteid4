@@ -33,7 +33,7 @@ Masking this with the button bit will tell the processor to look for interrupts 
 
 This is set whenever an interrupt is triggered to alert the processor. It can be cleared in the program setup and in the interrupt routine.
 
-## EnergyTrace
+## EXTRA WORK: EnergyTrace
 
 Using EnergyTrace on the FR series boards, I found that the button blink code that used interrupts had slightly better energy performance than the button blink code. A green delta means that the energy profile on the left is better than the one on the right.
 
@@ -45,3 +45,9 @@ Using EnergyTrace on the FR series boards, I found that the button blink code th
 
 ### FR6989
 ![FR6989](https://raw.githubusercontent.com/RU09342/lab-3-interrupts-and-timers-boorsteid4/master/Button%20Interrupt/FR6989/energytrace/energytrace_compare%20(3).png)
+
+## EXTRA WORK: 8-bit Shift Register
+
+I found, through Texas Instruments, an 8-bit shift register program for the MSP430x20x2 series processors. By changing the include, I was able to get it working on the G2553. In a roundabout way, the code creates a pin-pong effect using a software loop inside of the main. 
+
+P1DIR is set up to use bits, which are defined in the program as `DATA`, `CLOCK`, `LATCH`, and `ENABLE`. `DATA` is connected to LED1. `CLOCK` is pulsed in a void function.
