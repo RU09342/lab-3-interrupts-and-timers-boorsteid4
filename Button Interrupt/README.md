@@ -60,4 +60,4 @@ If I had a 74HC595 Shift Register, I could fully implement this using external c
 
 ![Schematic](http://processors.wiki.ti.com/images/4/46/74HC595.png)
 
-The inputs to this circuit are P1.0, 1.4, 1.5, and 1.6. The current being driven through each LED is controlled by a 270 Ohm resistor. The IC is being powered by VCC and is referenced at GND. Optionally, I could add a 0.1 microF cap between the latch pin and GND to stabilize the output.
+The inputs to this circuit are P1.0, 1.4, 1.5, and 1.6, which correspond to `DATA`, `CLOCK`, `LATCH`, and `ENABLE`. The current being driven through each LED is controlled by a 270 Ohm resistor. The IC is being powered by VCC and is referenced at GND. Optionally, I could add a 0.1 microF cap between the latch pin and GND to stabilize the output.
