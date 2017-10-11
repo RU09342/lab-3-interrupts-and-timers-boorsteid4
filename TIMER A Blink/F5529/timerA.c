@@ -18,13 +18,13 @@
 // Damon Boorstein
 // Rowan University
 // Date Created: October 2, 2017
-// Date Updated: October 4, 2017
+// Date Updated: October 10, 2017
 //
 //
 // Built with Code Composer Studio v7.2.0
 //***************************************************************************************
 #include <msp430f5529.h>
-
+#include CONVERTHZ_H_
 
 #define LED1        BIT0
 #define LED2        BIT7
@@ -45,7 +45,7 @@ void main(void)
     LED2_OUT &= ~LED2;
 
     TA0CCTL0 = CCIE;
-    TA0CTL |= TASSEL_2 + MC_2 + ID_3 + TACLR; // Set the timer A to SMCLCK/8, Continuous, Clear TA0R
+    TA0CTL |= TASSEL__SMCLK + MC__CONTINUOUS + ID_3 + TACLR; // Set the timer A to SMCLCK/8, Continuous, Clear TA0R
 
     // Clear the timer and enable timer interrupt
     __enable_interrupt();
