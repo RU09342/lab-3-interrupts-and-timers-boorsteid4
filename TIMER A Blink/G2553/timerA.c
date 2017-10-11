@@ -24,7 +24,7 @@
 // Built with Code Composer Studio v7.2.0
 //***************************************************************************************
 #include <msp430g2553.h>
-
+#include "convertHz.h"
 
 #define LED1        BIT0
 #define LED2        BIT6
@@ -39,8 +39,8 @@ void main(void)
     LED_DIR |= LED1 + LED2; // Set P1.0 and P1.6 to output direction
     LED_OUT &= ~(LED1 + LED2); // Turn the LEDs off
 
-    TA0CCTL0 |= CCIE;
-    TA0CTL |= TASSEL_2 + MC_2 + ID_3; // Set the timer A to SMCLCK/8, Continuous
+    convertHz(5); //5Hz
+
     // Clear the timer and enable timer interrupt
     __enable_interrupt();
 

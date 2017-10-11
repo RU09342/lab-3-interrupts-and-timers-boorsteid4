@@ -24,7 +24,7 @@
 // Built with Code Composer Studio v7.2.0
 //***************************************************************************************
 #include <msp430fr6989.h>
-
+#include "convertHz.h"
 
 #define LED1        BIT0
 #define LED2        BIT7
@@ -47,8 +47,8 @@ void main(void)
     LED1_OUT &= ~LED1; // Clear the LEDs
     LED2_OUT &= ~LED2;
 
-    TB0CCTL0 |= CCIE;
-    TB0CTL |= TBSSEL_2 + MC_2 + ID_3; // Set the timer B to SMCLCK/8, Continuous
+    convertHz(1); // 1Hz
+
     // Clear the timer and enable timer interrupt
     __enable_interrupt();
 

@@ -24,7 +24,7 @@
 // Built with Code Composer Studio v7.2.0
 //***************************************************************************************
 #include <msp430f5529.h>
-#include CONVERTHZ_H_
+#include "convertHz.h"
 
 #define LED1        BIT0
 #define LED2        BIT7
@@ -32,6 +32,8 @@
 #define LED2_OUT    P4OUT
 #define LED1_DIR    P1DIR
 #define LED2_DIR    P4DIR
+
+void convertHz(int);
 
 void main(void)
 {
@@ -44,8 +46,7 @@ void main(void)
     LED1_OUT &= ~LED1; // Clear the LEDs
     LED2_OUT &= ~LED2;
 
-    TA0CCTL0 = CCIE;
-    TA0CTL |= TASSEL__SMCLK + MC__CONTINUOUS + ID_3 + TACLR; // Set the timer A to SMCLCK/8, Continuous, Clear TA0R
+    convertHz(20); // 20Hz
 
     // Clear the timer and enable timer interrupt
     __enable_interrupt();

@@ -18,19 +18,21 @@
 // Damon Boorstein
 // Rowan University
 // Date Created: October 4, 2017
-// Date Updated: October 4, 2017
+// Date Updated: October 10, 2017
 //
 //
 // Built with Code Composer Studio v7.2.0
 //***************************************************************************************
 #include <msp430fr2311.h>
-
+#include "convertHz.h"
 
 #define LED         BIT0
 #define LED1_OUT    P1OUT
 #define LED2_OUT    P2OUT
 #define LED1_DIR    P1DIR
 #define LED2_DIR    P2DIR
+
+void convertHz(int);
 
 void main(void)
 {
@@ -46,8 +48,8 @@ void main(void)
     LED1_OUT &= ~LED; // Clear the LEDs
     LED2_OUT &= ~LED;
 
-    TB0CCTL0 |= CCIE;
-    TB0CTL |= TBSSEL_2 + MC_2 + ID_3; // Set the timer B to SMCLCK/8, Continuous
+    convertHz(2); // 2Hz
+
     // Clear the timer and enable timer interrupt
     __enable_interrupt();
 

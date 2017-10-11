@@ -24,12 +24,14 @@
 // Built with Code Composer Studio v7.2.0
 //***************************************************************************************
 #include <msp430fr5994.h>
-
+#include "convertHz.h"
 
 #define LED1        BIT0
 #define LED2        BIT1
 #define LED_OUT     P1OUT
 #define LED_DIR     P1DIR
+
+void convertHz(int);
 
 void main(void)
 {
@@ -41,8 +43,8 @@ void main(void)
     LED_DIR |= LED1 + LED2; // Set P1.0 and P1.1 to output direction
     LED_OUT &= ~(LED1 + LED2); // Clear the LEDs
 
-    TB0CCTL0 |= CCIE;
-    TB0CTL |= TBSSEL_2 + MC_2 + ID_3; // Set the timer B to SMCLCK/8, Continuous
+    convertHz(60); // 60 Hz
+
     // Clear the timer and enable timer interrupt
     __enable_interrupt();
 

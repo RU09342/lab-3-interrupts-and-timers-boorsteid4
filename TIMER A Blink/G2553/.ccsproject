@@ -13,4 +13,5 @@
 	<createSlaveProjects value=""/>
 	<templateProperties value="id=com.ti.common.project.core.emptyProjectTemplate,"/>
 	<filesToOpen value=""/>
+	<origin value="C:/Users/nomad/OneDrive/Documents/School/Rowan/Embedded/Lab 3/TIMER A Blink/G2553"/>
 </projectOptions>
