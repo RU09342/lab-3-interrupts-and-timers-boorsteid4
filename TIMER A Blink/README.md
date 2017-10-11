@@ -27,7 +27,7 @@ This register controls the timer counting mode. In Up mode, the timer counts up 
 
 ### Timer A Capture Compare Control Register (TAxCCTLn)
 You guessed it: there's also a control register for TAxCCRn. Because we are only utilizing compare mode, we can set this register up with 
-`c TAxCCTLn |= CCIE;` where `CCIE` stands for Capture/Control Interrupt Enable.
+```c TAxCCTLn |= CCIE;``` where `CCIE` stands for Capture/Control Interrupt Enable.
 
 ## convertHz
 
