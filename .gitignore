@@ -14,5 +14,5 @@
 *.mk
 *.ccxml
 *.txt
-*.jxbrowser-data
-*.metadata
+../.jxbrowser-data/
+../.metadata/
